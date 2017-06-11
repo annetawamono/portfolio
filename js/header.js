@@ -11,7 +11,7 @@ function init() {
 var colors = {
 	red: 0xf25346,
 	blue: 0x0000ff,
-	yellow: 0xe4e0ba,
+	yellow: 0xffff4c,
 	white: 0xffffff
 }
 
@@ -51,7 +51,7 @@ function createLights() {
 	aLight = new THREE.AmbientLight(colors.white, 0.5);
 	dLight = new THREE.DirectionalLight(colors.white, 0.9);
 
-	dLight.position.set(4, 2, 20);
+	dLight.position.set(-4, 2, 20);
 	/*dLight.shadow.camera.left = WIDTH/-2;
 	dLight.shadow.camera.right = WIDTH/2;
 	dLight.shadow.camera.top = HEIGHT/2;
@@ -76,9 +76,9 @@ function createLights() {
 	scene.add(helper);
 }
 
-var matRed = new THREE.MeshLambertMaterial({ color:colors.red/*, side:THREE.DoubleSide*/ });
-var matBlue = new THREE.MeshLambertMaterial({ color:colors.blue, side:THREE.DoubleSide });
-var matYellow = new THREE.MeshLambertMaterial({ color:colors.yellow, side:THREE.DoubleSide });
+var matRed = new THREE.MeshLambertMaterial({ color:colors.red });
+var matBlue = new THREE.MeshLambertMaterial({ color:colors.blue });
+var matYellow = new THREE.MeshLambertMaterial({ color:colors.yellow });
 
 LetterA = function() {
 	this.mesh = new THREE.Object3D();
@@ -137,18 +137,50 @@ LetterA = function() {
 	this.faceMesh.castShadow = true;
 	this.faceMesh.receiveShadow = true;
 
-	this.mesh.rotation.y = degToRad(180);
+	this.faceMesh.rotation.y = degToRad(180);
 
 	this.mesh.add(this.faceMesh);
+
 	//left side
+	var leftGeom = new THREE.BoxGeometry(2, 8, 3);
+	var left = new THREE.Mesh(leftGeom, matBlue);
+
+	left.position.z -= 2;
+	left.position.y += 1;
+	left.position.x -= 2;
+
+	left.castShadow = true;
+	left.receiveShadow = true;
+
+	this.mesh.add(left);
 
 	//right side
+	var rightGeom = new THREE.BoxGeometry(2, 6, 3);
+	var right = new THREE.Mesh(rightGeom, matYellow);
+
+	right.position.z -= 2;
+	right.position.x += 2;
+
+	right.castShadow = true;
+	right.receiveShadow = true;
+
+	this.mesh.add(right);
 
 	//top side
+	var topGeom = new THREE.BoxGeometry(4, 2, 3);
+	var top = new THREE.Mesh(topGeom, matBlue);
 
-	//bottom 1
+	top.position.z -= 2;
+	top.position.y += 4;
+	top.position.x += 1;
 
-	//bottom 2
+	top.castShadow = true;
+	top.receiveShadow = true;
+
+	this.mesh.add(top);
+
+	this.mesh.rotation.y = degToRad(-45);
+	this.mesh.rotation.x = degToRad(45);
 }
 
 LetterN = function() {
@@ -163,45 +195,22 @@ LetterT = function() {
 	
 }
 
-var a1, a2, a3, a4, mesh, size = 20;
+var a1, mesh, size = 20;
 function createLetters() {
 	mesh = new THREE.Object3D();
 	a1 = new LetterA();
 	a1.mesh.scale.set(size, size, size);
-	//scene.add(a1.mesh);
+	a1.mesh.position.z -= 150;
+	scene.add(a1.mesh);
 
-	a2 = new LetterA();
-	a2.mesh.scale.set(size, size, size);
-	a2.mesh.position.x -= 60;
-	a2.mesh.position.z -= 60;
-	a2.mesh.rotation.y = degToRad(90);
-	//scene.add(a2.mesh);
-
-	a3 = new LetterA();
-	a3.mesh.scale.set(size, size, size);
-	a3.mesh.position.x += 60;
-	a3.mesh.position.z -= 60;
-	a3.mesh.rotation.y = degToRad(-90);
-
-	a4 = new LetterA();
-	a4.mesh.scale.set(size, size, size);
-	a4.mesh.position.z -= 120;
-	a4.mesh.rotation.y = degToRad(0);
-
-	mesh.add(a1.mesh);
-	mesh.add(a2.mesh);
-	mesh.add(a3.mesh);
-	mesh.add(a4.mesh);
-
-	mesh.position.z -= 150;
+	/*mesh.position.z -= 150;
 	mesh.rotation.y = degToRad(45);
 	mesh.rotation.x = degToRad(45);
 
-	scene.add(mesh);
+	scene.add(mesh);*/
 }
 
 function loop() {
-	mesh.rotation.y += 0.005;
 	renderer.render(scene, camera);
 	requestAnimationFrame(loop);
 }
