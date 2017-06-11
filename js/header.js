@@ -79,6 +79,7 @@ function createLights() {
 var matRed = new THREE.MeshLambertMaterial({ color:colors.red });
 var matBlue = new THREE.MeshLambertMaterial({ color:colors.blue });
 var matYellow = new THREE.MeshLambertMaterial({ color:colors.yellow });
+var cubeMaterials = [matBlue, matYellow, matYellow, matYellow, matYellow, matYellow];
 
 LetterA = function() {
 	this.mesh = new THREE.Object3D();
@@ -143,7 +144,7 @@ LetterA = function() {
 
 	//left side
 	var leftGeom = new THREE.BoxGeometry(2, 8, 3);
-	var left = new THREE.Mesh(leftGeom, matBlue);
+	var left = new THREE.Mesh(leftGeom, cubeMaterials);
 
 	left.position.z -= 2;
 	left.position.y += 1;
@@ -155,10 +156,11 @@ LetterA = function() {
 	this.mesh.add(left);
 
 	//right side
-	var rightGeom = new THREE.BoxGeometry(2, 6, 3);
-	var right = new THREE.Mesh(rightGeom, matYellow);
+	var rightGeom = new THREE.BoxGeometry(2, 8, 3);
+	var right = new THREE.Mesh(rightGeom, cubeMaterials);
 
 	right.position.z -= 2;
+	right.position.y += 1;
 	right.position.x += 2;
 
 	right.castShadow = true;
@@ -167,12 +169,11 @@ LetterA = function() {
 	this.mesh.add(right);
 
 	//top side
-	var topGeom = new THREE.BoxGeometry(4, 2, 3);
-	var top = new THREE.Mesh(topGeom, matBlue);
+	var topGeom = new THREE.BoxGeometry(2, 2, 3);
+	var top = new THREE.Mesh(topGeom, cubeMaterials);
 
 	top.position.z -= 2;
 	top.position.y += 4;
-	top.position.x += 1;
 
 	top.castShadow = true;
 	top.receiveShadow = true;
