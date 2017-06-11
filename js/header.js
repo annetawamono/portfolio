@@ -219,25 +219,29 @@ function createLetters() {
 function updateLetters() {
 	var rotY = normalize(mousePos.x, -1, 1, -10, 10);
 
-	if(a1.faceMesh.position.x > -0.5 && mousePos.x < 0) {
-		a1.faceMesh.position.x += mousePos.x;
+	updateLetter(a1, rotY);
+}
+
+function updateLetter(letter, rotY) {
+	if(letter.faceMesh.position.x > -0.5 && mousePos.x < 0) {
+		letter.faceMesh.position.x += mousePos.x;
 	}
-	if(a1.faceMesh.position.x < 0.5 && mousePos.x > 0) {
-		a1.faceMesh.position.x += mousePos.x;
+	if(letter.faceMesh.position.x < 0.5 && mousePos.x > 0) {
+		letter.faceMesh.position.x += mousePos.x;
 	}
-	if(a1.faceMesh.position.y > -0.5 && mousePos.y < 0) {
-		a1.faceMesh.position.y += mousePos.y;
+	if(letter.faceMesh.position.y > -0.5 && mousePos.y < 0) {
+		letter.faceMesh.position.y += mousePos.y;
 	}
-	if(a1.faceMesh.position.y < 0.5 && mousePos.y > 0) {
-		a1.faceMesh.position.y += mousePos.y;
+	if(letter.faceMesh.position.y < 0.5 && mousePos.y > 0) {
+		letter.faceMesh.position.y += mousePos.y;
 	}
 
-	if(a1.mesh.rotation.y > degToRad(-45) && mousePos.x < 0) {
-		a1.mesh.rotation.y += degToRad(rotY);
+	if(letter.mesh.rotation.y > degToRad(-45) && mousePos.x < 0) {
+		letter.mesh.rotation.y += degToRad(rotY);
 	}
 
-	if(a1.mesh.rotation.y < degToRad(45) && mousePos.x > 0) {
-		a1.mesh.rotation.y += degToRad(rotY);
+	if(letter.mesh.rotation.y < degToRad(45) && mousePos.x > 0) {
+		letter.mesh.rotation.y += degToRad(rotY);
 	}
 }
 
