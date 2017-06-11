@@ -5,7 +5,18 @@ function init() {
 	createLights();
 	createLetters();
 
+	document.addEventListener('mousemove', handleMouseMove, false);
+
 	loop();
+}
+
+var mousePos = {x: 0, y:0};
+
+function handleMouseMove(event) {
+	var tx = -1 + (event.clientX/WIDTH)*2;
+	var ty = 1 - (event.clientY/HEIGHT)*2;
+
+	mousePos = {x: tx, y: ty};
 }
 
 var colors = {
@@ -38,7 +49,7 @@ function createScene() {
 	window.addEventListener('resize', handleWindowResize, false);
 }
 
-function handleWindowResize() {
+function handleWindowResize(event) {
 	HEIGHT = window.innerHeight;
 	WIDTH = window.innerWidth;
 	renderer.setSize(WIDTH, HEIGHT);
@@ -79,7 +90,7 @@ function createLights() {
 var matRed = new THREE.MeshLambertMaterial({ color:colors.red });
 var matBlue = new THREE.MeshLambertMaterial({ color:colors.blue });
 var matYellow = new THREE.MeshLambertMaterial({ color:colors.yellow });
-var cubeMaterials = [matBlue, matYellow, matYellow, matYellow, matYellow, matYellow];
+var cubeMaterials = [matBlue, matBlue, matYellow, matYellow, matYellow, matYellow];
 
 LetterA = function() {
 	this.mesh = new THREE.Object3D();
@@ -203,19 +214,48 @@ function createLetters() {
 	a1.mesh.scale.set(size, size, size);
 	a1.mesh.position.z -= 150;
 	scene.add(a1.mesh);
+}
 
-	/*mesh.position.z -= 150;
-	mesh.rotation.y = degToRad(45);
-	mesh.rotation.x = degToRad(45);
+function updateLetters() {
+	var rotY = normalize(mousePos.x, -1, 1, -10, 10);
 
-	scene.add(mesh);*/
+	if(a1.faceMesh.position.x > -0.5 && mousePos.x < 0) {
+		a1.faceMesh.position.x += mousePos.x;
+	}
+	if(a1.faceMesh.position.x < 0.5 && mousePos.x > 0) {
+		a1.faceMesh.position.x += mousePos.x;
+	}
+	if(a1.faceMesh.position.y > -0.5 && mousePos.y < 0) {
+		a1.faceMesh.position.y += mousePos.y;
+	}
+	if(a1.faceMesh.position.y < 0.5 && mousePos.y > 0) {
+		a1.faceMesh.position.y += mousePos.y;
+	}
+
+	if(a1.mesh.rotation.y > degToRad(-45) && mousePos.x < 0) {
+		a1.mesh.rotation.y += degToRad(rotY);
+	}
+
+	if(a1.mesh.rotation.y < degToRad(45) && mousePos.x > 0) {
+		a1.mesh.rotation.y += degToRad(rotY);
+	}
 }
 
 function loop() {
+	updateLetters();
 	renderer.render(scene, camera);
 	requestAnimationFrame(loop);
 }
 
 function degToRad(degrees) {
     return degrees * Math.PI / 180;
+}
+
+function normalize(v, vmin, vmax, tmin, tmax) {
+	var nv = Math.max(Math.min(v,vmax), vmin);
+	var dv = vmax-vmin;
+	var pc = (nv-vmin)/dv;
+	var dt = tmax-tmin;
+	var tv = tmin + (pc*dt);
+	return tv;	
 }
