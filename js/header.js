@@ -230,7 +230,6 @@ LetterN = function() {
 	this.faceMesh.receiveShadow = true;
 
 	this.faceMesh.rotation.y = degToRad(180);
-	//this.faceMesh.position.y += 3;
 
 	this.mesh.add(this.faceMesh);
 
@@ -276,6 +275,103 @@ LetterN = function() {
 }
 
 LetterE = function() {
+	this.mesh = new THREE.Object3D();
+
+	//face
+	var faceGeom = new THREE.Geometry();
+
+	faceGeom.vertices.push(new THREE.Vector3(1.0, 5.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(3.0, 5.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(3.0, -3.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, -3.0, 0.0));
+
+	faceGeom.vertices.push(new THREE.Vector3(-3.0, 5.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, 5.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, 3.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(-3.0, 3.0, 0.0));
+
+	faceGeom.vertices.push(new THREE.Vector3(-1.0, 2.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, 2.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, 0.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(-1.0, 0.0, 0.0));
+
+	faceGeom.vertices.push(new THREE.Vector3(-3.0, -1.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, -1.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, -3.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(-3.0, -3.0, 0.0));
+
+	faceGeom.faces.push(new THREE.Face3(0, 1, 2));
+	faceGeom.faces.push(new THREE.Face3(0, 2, 3));
+	faceGeom.faces.push(new THREE.Face3(4, 5, 6));
+	faceGeom.faces.push(new THREE.Face3(4, 6, 7));
+	faceGeom.faces.push(new THREE.Face3(8, 9, 10));
+	faceGeom.faces.push(new THREE.Face3(8, 10, 11));
+	faceGeom.faces.push(new THREE.Face3(12, 13, 14));
+	faceGeom.faces.push(new THREE.Face3(12, 14, 15));
+
+	faceGeom.computeFaceNormals();
+
+	this.faceMesh = new THREE.Mesh(faceGeom, matRed);
+	this.faceMesh.castShadow = true;
+	this.faceMesh.receiveShadow = true;
+
+	this.faceMesh.rotation.y = degToRad(180);
+
+	this.mesh.add(this.faceMesh);
+
+	//left
+	var leftGeom = new THREE.BoxGeometry(2, 8, 3);
+	var left = new THREE.Mesh(leftGeom, cubeMaterials);
+
+	left.position.x -= 2;
+	left.position.y += 1;
+	left.position.z -= 2;
+
+	left.castShadow = true;
+	left.receiveShadow = true;
+
+	this.mesh.add(left);
+
+	//top
+	var topGeom = new THREE.BoxGeometry(4, 2, 3);
+	var top = new THREE.Mesh(topGeom, cubeMaterials);
+
+	top.position.y += 4;
+	top.position.x += 1;
+	top.position.z -= 2;
+
+	top.castShadow = true;
+	top.receiveShadow = true;
+
+	this.mesh.add(top);
+
+	//middle
+	var middleGeom = new THREE.BoxGeometry(2, 2, 3);
+	var middle = new THREE.Mesh(middleGeom, cubeMaterials);
+
+	middle.position.y += 1;
+	middle.position.z -= 2;
+
+	middle.castShadow = true;
+	middle.receiveShadow = true;
+
+	this.mesh.add(middle);
+
+	//bottom
+	var bottomGeom = new THREE.BoxGeometry(4, 2, 3);
+	var bottom = new THREE.Mesh(bottomGeom, cubeMaterials);
+
+	bottom.position.y -= 2;
+	bottom.position.x += 1;
+	bottom.position.z -= 2;
+
+	bottom.castShadow = true;
+	bottom.receiveShadow = true;
+
+	this.mesh.add(bottom);
+
+	this.mesh.rotation.y = degToRad(-45);
+	this.mesh.rotation.x = degToRad(45);
 	
 }
 
@@ -283,7 +379,7 @@ LetterT = function() {
 	
 }
 
-var a1, n1, mesh, size = 20;
+var a1, n1, e, mesh, size = 20;
 function createLetters() {
 	mesh = new THREE.Object3D();
 	a1 = new LetterA();
@@ -296,6 +392,12 @@ function createLetters() {
 	n1.mesh.position.z -= 150;
 	n1.mesh.position.x += 200;
 	scene.add(n1.mesh);
+
+	e = new LetterE();
+	e.mesh.scale.set(size, size, size);
+	e.mesh.position.z -= 150;
+	e.mesh.position.x -= 200;
+	scene.add(e.mesh);
 }
 
 function updateLetters() {
@@ -303,6 +405,7 @@ function updateLetters() {
 
 	updateLetter(a1, rotY);
 	updateLetter(n1, rotY);
+	updateLetter(e, rotY);
 }
 
 function updateLetter(letter, rotY) {
