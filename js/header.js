@@ -63,28 +63,28 @@ function createLights() {
 	dLight = new THREE.DirectionalLight(colors.white, 0.9);
 
 	dLight.position.set(-4, 2, 20);
-	/*dLight.shadow.camera.left = WIDTH/-2;
+	dLight.shadow.camera.left = WIDTH/-2;
 	dLight.shadow.camera.right = WIDTH/2;
 	dLight.shadow.camera.top = HEIGHT/2;
-	dLight.shadow.camera.bottom =HEIGHT/-2;*/
-	dLight.shadow.camera.left = -200;
+	dLight.shadow.camera.bottom =HEIGHT/-2;
+	/*dLight.shadow.camera.left = -200;
 	dLight.shadow.camera.right = 200;
 	dLight.shadow.camera.top = 200;
-	dLight.shadow.camera.bottom = -200;
+	dLight.shadow.camera.bottom = -200;*/
 	dLight.shadow.camera.near = 50;
 	dLight.shadow.camera.far = 300;
 
 	dLight.castShadow = true;
 
-	/*dLight.shadow.mapSize.width = 2048;
-	dLight.shadow.mapSize.height = 2048;*/
-	dLight.shadow.mapSize.width = 512;
-	dLight.shadow.mapSize.height = 512;
+	dLight.shadow.mapSize.width = 2048;
+	dLight.shadow.mapSize.height = 2048;
+	/*dLight.shadow.mapSize.width = 512;
+	dLight.shadow.mapSize.height = 512;*/
 
 	scene.add(aLight);
 	scene.add(dLight);
-	/*var helper = new THREE.CameraHelper(dLight.shadow.camera);
-	scene.add(helper);*/
+	var helper = new THREE.CameraHelper(dLight.shadow.camera);
+	scene.add(helper);
 }
 
 var matRed = new THREE.MeshLambertMaterial({ color:colors.red });
