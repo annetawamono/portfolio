@@ -83,8 +83,8 @@ function createLights() {
 
 	scene.add(aLight);
 	scene.add(dLight);
-	var helper = new THREE.CameraHelper(dLight.shadow.camera);
-	scene.add(helper);
+	/*var helper = new THREE.CameraHelper(dLight.shadow.camera);
+	scene.add(helper);*/
 }
 
 var matRed = new THREE.MeshLambertMaterial({ color:colors.red });
