@@ -83,8 +83,8 @@ function createLights() {
 
 	scene.add(aLight);
 	scene.add(dLight);
-	var helper = new THREE.CameraHelper(dLight.shadow.camera);
-	scene.add(helper);
+	/*var helper = new THREE.CameraHelper(dLight.shadow.camera);
+	scene.add(helper);*/
 }
 
 var matRed = new THREE.MeshLambertMaterial({ color:colors.red });
@@ -433,30 +433,43 @@ LetterT = function() {
 	this.mesh.rotation.x = degToRad(45);
 }
 
-var a1, n1, e, t, size = 20;
+var a1, n1, n2, e, t, a2, size = 20;
 function createLetters() {
 	a1 = new LetterA();
 	a1.mesh.scale.set(size, size, size);
 	a1.mesh.position.z -= 150;
+	a1.mesh.position.x -= 500;
 	scene.add(a1.mesh);
 
 	n1 = new LetterN();
 	n1.mesh.scale.set(size, size, size);
 	n1.mesh.position.z -= 150;
-	n1.mesh.position.x += 200;
+	n1.mesh.position.x -= 300;
 	scene.add(n1.mesh);
+
+	n2 = new LetterN();
+	n2.mesh.scale.set(size, size, size);
+	n2.mesh.position.z -= 150;
+	n2.mesh.position.x -= 100;
+	scene.add(n2.mesh);	
 
 	e = new LetterE();
 	e.mesh.scale.set(size, size, size);
 	e.mesh.position.z -= 150;
-	e.mesh.position.x -= 200;
+	e.mesh.position.x += 100;
 	scene.add(e.mesh);
 
 	t = new LetterT();
 	t.mesh.scale.set(size, size, size);
 	t.mesh.position.z -= 150;
-	t.mesh.position.x -= 400;
+	t.mesh.position.x += 300;
 	scene.add(t.mesh);
+
+	a2 = new LetterA();
+	a2.mesh.scale.set(size, size, size);
+	a2.mesh.position.z -= 150;
+	a2.mesh.position.x += 500;
+	scene.add(a2.mesh);
 }
 
 function updateLetters() {
@@ -466,6 +479,8 @@ function updateLetters() {
 	updateLetter(n1, rotY);
 	updateLetter(e, rotY);
 	updateLetter(t, rotY);
+	updateLetter(a2, rotY);
+	updateLetter(n2, rotY);
 }
 
 function updateLetter(letter, rotY) {
