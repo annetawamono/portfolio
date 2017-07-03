@@ -376,12 +376,65 @@ LetterE = function() {
 }
 
 LetterT = function() {
-	
+	this.mesh = new THREE.Object3D();
+
+	//face
+	var faceGeom = new THREE.Geometry();
+
+	faceGeom.vertices.push(new THREE.Vector3(-3.0, 5.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(3.0, 5.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(3.0, 3.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(-3.0, 3.0, 0.0));
+
+	faceGeom.vertices.push(new THREE.Vector3(-1.0, 3.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, 3.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(1.0, -3.0, 0.0));
+	faceGeom.vertices.push(new THREE.Vector3(-1.0, -3.0, 0.0));
+
+	faceGeom.faces.push(new THREE.Face3(0, 1, 2));
+	faceGeom.faces.push(new THREE.Face3(0, 2, 3));
+	faceGeom.faces.push(new THREE.Face3(4, 5, 6));
+	faceGeom.faces.push(new THREE.Face3(4, 6, 7));
+
+	faceGeom.computeFaceNormals();
+
+	this.faceMesh = new THREE.Mesh(faceGeom, matRed);
+	this.faceMesh.castShadow = true;
+	this.faceMesh.receiveShadow = true;
+
+	this.faceMesh.rotation.y = degToRad(180);
+
+	this.mesh.add(this.faceMesh);
+
+	//top
+	var topGeom = new THREE.BoxGeometry(6, 2, 3);
+	var top = new THREE.Mesh(topGeom, cubeMaterials);
+
+	top.position.y += 4;
+	top.position.z -= 2;
+
+	top.castShadow = true;
+	top.receiveShadow = true;
+
+	this.mesh.add(top);
+
+	//middle
+	var middleGeom = new THREE.BoxGeometry(2, 6, 3);
+	var middle = new THREE.Mesh(middleGeom, cubeMaterials);
+
+	middle.position.z -= 2;
+
+	middle.castShadow = true;
+	middle.receiveShadow = true;
+
+	this.mesh.add(middle);
+
+	this.mesh.rotation.y = degToRad(-45);
+	this.mesh.rotation.x = degToRad(45);
 }
 
-var a1, n1, e, mesh, size = 20;
+var a1, n1, e, t, size = 20;
 function createLetters() {
-	mesh = new THREE.Object3D();
 	a1 = new LetterA();
 	a1.mesh.scale.set(size, size, size);
 	a1.mesh.position.z -= 150;
@@ -398,6 +451,12 @@ function createLetters() {
 	e.mesh.position.z -= 150;
 	e.mesh.position.x -= 200;
 	scene.add(e.mesh);
+
+	t = new LetterT();
+	t.mesh.scale.set(size, size, size);
+	t.mesh.position.z -= 150;
+	t.mesh.position.x -= 400;
+	scene.add(t.mesh);
 }
 
 function updateLetters() {
@@ -406,6 +465,7 @@ function updateLetters() {
 	updateLetter(a1, rotY);
 	updateLetter(n1, rotY);
 	updateLetter(e, rotY);
+	updateLetter(t, rotY);
 }
 
 function updateLetter(letter, rotY) {
