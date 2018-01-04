@@ -1,12 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:900,");
+h1 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+a {
+  font-family: 'Roboto Mono', monospace; }
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100vh;
   min-height: 100%; }
 
-.sections, #world {
+.sections, #world, #about, #projects {
   width: 100%;
   height: 100vh;
   overflow: hidden; }
+
+.transitions, #about, #projects {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: none; }
+
+#about {
+  background-color: blue; }
+
+#projects {
+  background-color: #f25346; }
+
+#links {
+  position: absolute;
+  bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */
