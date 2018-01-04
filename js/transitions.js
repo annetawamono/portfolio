@@ -74,4 +74,10 @@ $(function() {
     $(this).removeClass("backHover");
     $(".content>h1").removeClass("topHover");
   });
+
+  $("#email").mouseenter(function() {
+    $(this).addClass("backHover");
+  }).mouseleave(function() {
+    $(this).removeClass("backHover");
+  });
 });

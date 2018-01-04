@@ -7,6 +7,8 @@ $yellow: rgb(255, 212, 84);
 a {
 	font-family: 'Roboto Mono', monospace;
 	cursor: pointer;
+	text-decoration: none;
+	color: black;
 }
 
 h1 {
@@ -16,9 +18,19 @@ h1 {
 	font-size: 72px;
 }
 
+h2 {
+	font-family: 'Roboto Mono', monospace;
+	text-transform: uppercase;
+}
+
 h3 {
 	font-family: 'Roboto Mono', monospace;
 	text-transform: uppercase;
+}
+
+p, ul {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 18px;
 }
 
 body, html {
@@ -62,6 +74,27 @@ body, html {
 	@extend .transitions;
 }
 
+#text {
+	color: white;
+	span {
+		background-color: white;
+		color: $blue;
+	}
+	div {
+		width: 40%;
+		margin-right: 10%;
+		float: left;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			// span {
+			// 	font-weight: bold;
+			// }
+		}
+	}
+}
+
 #projects {
 	background-color: $red;
 	@extend .transitions;
@@ -83,6 +116,61 @@ body, html {
 		a {
 			font-size: 24px;
 		}
+	}
+}
+
+#cv {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 35px;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		a {
+			font-size: 18px;
+		}
+		li {
+			border: 2px solid black;
+			border-radius: 10px;
+			padding: 7px 7px 10px 7px;
+			-webkit-transition: box-shadow 0.2s; /* Safari */
+    	transition: box-shadow 0.2s ease-in;
+		}
+		li:hover {
+			box-shadow: 5px 5px $blue;
+		}
+	}
+	img {
+		vertical-align: sub;
+	}
+}
+
+#copyright {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 35px 35px 0 35px;
+	p {
+		font-size: 12px !important;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+#deets {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin-bottom: 12px;
+	}
+	img {
+		vertical-align: middle;
 	}
 }
 
