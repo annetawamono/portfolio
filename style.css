@@ -96,7 +96,6 @@ body, html {
       font-size: 18px; }
     #cv ul li {
       border: 2px solid black;
-      border-radius: 10px;
       padding: 7px 7px 10px 7px;
       -webkit-transition: box-shadow 0.2s;
       /* Safari */

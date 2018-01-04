@@ -1,7 +1,7 @@
 $(function() {
   // Page Transitions
   var about = false, proj = false, contact = false;
-
+  // TODO: remove all console logs
   console.log("hi");
   $("#aLink").click(function() {
     console.log("clicked");
