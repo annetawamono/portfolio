@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:900,");
+a {
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer; }
+
 h1 {
   font-family: 'Rubik', sans-serif;
   font-weight: 900;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 72px; }
 
-a {
-  font-family: 'Roboto Mono', monospace; }
+h3 {
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase; }
 
 body, html {
   margin: 0;
@@ -13,12 +19,19 @@ body, html {
   height: 100vh;
   min-height: 100%; }
 
+.content {
+  margin: 12%; }
+  .content h1 {
+    margin-top: 25px; }
+  .content h3 {
+    width: 74px; }
+
 .sections, #world, #about, #projects {
   width: 100%;
   height: 100vh;
   overflow: hidden; }
 
-.transitions, #about, #projects {
+.transitions, #about, #projects, #contact {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -31,8 +44,33 @@ body, html {
 #projects {
   background-color: #f25346; }
 
+#contact {
+  background-color: #ffd454; }
+
 #links {
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  margin: 35px; }
+  #links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    #links ul a {
+      font-size: 24px; }
+
+.aLinkHover {
+  border-bottom: 4px solid blue; }
+
+.pLinkHover {
+  border-bottom: 4px solid #f25346; }
+
+.cLinkHover {
+  border-bottom: 4px solid #ffd454; }
+
+.backHover {
+  border-bottom: 4px solid white; }
+
+.topHover {
+  margin-top: 21px !important; }
 
 /*# sourceMappingURL=style.css.map */
