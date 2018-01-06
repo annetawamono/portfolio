@@ -1,0 +1,7 @@
+{"projects":[
+    {"name": "Sevara", "image": "media/images/sevara.jpg", "description": "A Woocommerce clothing store for the Cape Town based company Sevara.", "link": "http://shopsevara.com/", "type": "web"},
+    {"name": "Confidance", "image": "media/images/confidance.jpg", "description": "A Wordpress blog for dancer and writer, NeoTheGift", "link": "http://confi.dance/", "type": "web"},
+    {"name": "Scimatics Homework Tracker", "image": "media/images/scihwwt.png", "description": "A web app built using Bootstrap and PHP for the tutoring company Scimatics Solution. It is used to track students' homework and acdemic progress.", "link": null, "type": "web"},
+    {"name": "Lost At Sea", "image": "media/images/lostatsea.jpg", "description": "A ThreeJS experiment.", "link": "https://codepen.io/annetawamono/full/OzmBNZ/", "type": "web"},
+    {"name": "Undercover Agent", "image": "media/images/blender.jpg", "description": "Displaying a Blender model using ThreeJS", "link": "https://codepen.io/annetawamono/full/jYamgp/", "type": "web"}
+]}

@@ -67,6 +67,7 @@ body, html {
 	height: 100vh;
 	top: 0;
 	display: none;
+	overflow: overlay;
 }
 
 #about {
@@ -95,6 +96,21 @@ body, html {
 #projects {
 	background-color: $red;
 	@extend .transitions;
+}
+
+#project-container {
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 30px;
+}
+
+.proj-item {
+	padding: 10px;
+	border: 2px solid black;
+	img {
+		width: 100%;
+	}
 }
 
 #contact {
@@ -193,4 +209,80 @@ body, html {
 
 .topHover {
 	margin-top: 21px !important;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	max-width: 900px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	h1 {
+		font-size: 48px;
+	}
+
+	.content h1 {
+		margin-top: 0;
+	}
+
+	#text div {
+			width: 100%;
+			margin-right: 0;
+			float: none;
+			margin-bottom: 40px;
+	}
+
+	#project-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media only screen and (min-width: 610px) and (max-width: 767px) {
+	#copyright {
+		width: 30%;
+	}
+	h1 {
+		font-size: 41px;
+	}
+	#text div {
+			width: 100%;
+			margin-right: 0;
+			float: none;
+			margin-bottom: 40px;
+	}
+}
+
+@media only screen /*and (min-width: 320px)*/ and (max-width: 609px) {
+	#copyright {
+		display: none;
+	}
+	#cv {
+		width: 215px;
+		left: 0;
+		margin: 35px auto;
+	}
+	#links {
+		right: 0;
+		left: 0;
+		margin: 35px auto;
+		text-align: center;
+	}
+	#text div {
+			width: 100%;
+			margin-right: 0;
+			float: none;
+			margin-bottom: 40px;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	p, ul {
+		font-size: 16px;
+	}
+	h2 {
+		font-size: 18px;
+	}
+	li {
+		overflow-wrap: break-word;
+	}
 }

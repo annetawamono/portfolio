@@ -32,13 +32,16 @@ function createScene() {
 	HEIGHT = window.innerHeight;
 	WIDTH = window.innerWidth;
 
+	console.log(window.innerWidth);
+
 	scene = new THREE.Scene();
 	near = 0.1;
 	far = 500;
 
 	camera = new THREE.OrthographicCamera(WIDTH/-2, WIDTH/2, HEIGHT/2, HEIGHT/-2, near, far);
 	camera.position.x = 0;
-	camera.position.z = 50;
+	camera.position.z = 50 * WIDTH/HEIGHT;
+	console.log("cam cam" + camera.position.z);
 	camera.position.y = 0;
 
 	renderer = new THREE.WebGLRenderer({alpha:true, antialias:true});
@@ -50,8 +53,17 @@ function createScene() {
 }
 
 function handleWindowResize(event) {
+	console.log("window resize");
 	HEIGHT = window.innerHeight;
 	WIDTH = window.innerWidth;
+
+	console.log(window.innerWidth);
+
+	camera.left = WIDTH/-2;
+	camera.right = WIDTH/2;
+	camera.top = HEIGHT/2;
+	camera.bottom = HEIGHT/-2;
+	camera.position.z = 80;
 	renderer.setSize(WIDTH, HEIGHT);
 	camera.updateProjectionMatrix();
 }
@@ -125,7 +137,7 @@ LetterA = function() {
 	faceGeom.vertices.push(new THREE.Vector3(1.0, -1.0, 0.0));
 	faceGeom.vertices.push(new THREE.Vector3(3.0, -1.0, 0.0));
 	faceGeom.vertices.push(new THREE.Vector3(3.0, -3.0, 0.0));
-	faceGeom.vertices.push(new THREE.Vector3(1.0, -3.0, 0.0));			
+	faceGeom.vertices.push(new THREE.Vector3(1.0, -3.0, 0.0));
 
 	//ok so i figured out the face thing. three.js renders faces as triangles,
 	//so 2 triangles make a square. And Face3() takes in the index of the vectors
@@ -372,7 +384,7 @@ LetterE = function() {
 
 	this.mesh.rotation.y = degToRad(-45);
 	this.mesh.rotation.x = degToRad(45);
-	
+
 }
 
 LetterT = function() {
@@ -451,7 +463,7 @@ function createLetters() {
 	n2.mesh.scale.set(size, size, size);
 	n2.mesh.position.z -= 150;
 	n2.mesh.position.x -= 100;
-	scene.add(n2.mesh);	
+	scene.add(n2.mesh);
 
 	e = new LetterE();
 	e.mesh.scale.set(size, size, size);
@@ -522,5 +534,5 @@ function normalize(v, vmin, vmax, tmin, tmax) {
 	var pc = (nv-vmin)/dv;
 	var dt = tmax-tmin;
 	var tv = tmin + (pc*dt);
-	return tv;	
+	return tv;
 }

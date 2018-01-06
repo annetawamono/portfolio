@@ -1,10 +1,9 @@
 $(function() {
   // Page Transitions
   var about = false, proj = false, contact = false;
-  // TODO: remove all console logs
+
   console.log("hi");
   $("#aLink").click(function() {
-    console.log("clicked");
     if(about) {
       about = false;
       $("#about").animate({height: "hide"}, 500);
@@ -15,7 +14,6 @@ $(function() {
   });
 
   $("#pLink").click(function() {
-    console.log("clicked");
     if(proj) {
       proj = false;
       $("#projects").animate({height: "hide"}, 500);
@@ -26,7 +24,6 @@ $(function() {
   });
 
   $("#cLink").click(function() {
-    console.log("clicked");
     if(contact) {
       contact = false;
       $("#contact").animate({height: "hide"}, 500);
