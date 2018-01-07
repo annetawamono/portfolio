@@ -34,30 +34,36 @@ function createScene() {
 
 	console.log(window.innerWidth);
 
+	if(WIDTH < 1200) {
+		$("#world").append("<img id='logo' src='/media/images/logo.png' />");
+		return;
+	}
+
 	scene = new THREE.Scene();
 	near = 0.1;
 	far = 500;
 
 	camera = new THREE.OrthographicCamera(WIDTH/-2, WIDTH/2, HEIGHT/2, HEIGHT/-2, near, far);
 	camera.position.x = 0;
-	camera.position.z = 50 * WIDTH/HEIGHT;
-	console.log("cam cam" + camera.position.z);
+	camera.position.z = 50;
 	camera.position.y = 0;
 
-	renderer = new THREE.WebGLRenderer({alpha:true, antialias:true});
-	renderer.setSize(WIDTH, HEIGHT);
-	renderer.shadowMap.enabled = true;
-	container = document.getElementById('world');
-	container.appendChild(renderer.domElement);
-	window.addEventListener('resize', handleWindowResize, false);
+	if (Detector.webgl) renderer = new THREE.WebGLRenderer({alpha:true, antialias:true});
+	if(renderer) {
+		renderer.setSize(WIDTH, HEIGHT);
+		renderer.shadowMap.enabled = true;
+		container = document.getElementById('world');
+		container.appendChild(renderer.domElement);
+		window.addEventListener('resize', handleWindowResize, false);
+	} else {
+		$("#world").append("<img id='logo' src='/media/images/logo.png' />");
+	}
 }
 
 function handleWindowResize(event) {
 	console.log("window resize");
 	HEIGHT = window.innerHeight;
 	WIDTH = window.innerWidth;
-
-	console.log(window.innerWidth);
 
 	camera.left = WIDTH/-2;
 	camera.right = WIDTH/2;
