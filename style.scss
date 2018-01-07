@@ -260,6 +260,9 @@ body, html {
 			float: none;
 			margin-bottom: 40px;
 	}
+	#project-container {
+		grid-template-columns: 1fr;
+	}
 }
 
 @media only screen /*and (min-width: 320px)*/ and (max-width: 609px) {
@@ -282,6 +285,9 @@ body, html {
 			margin-right: 0;
 			float: none;
 			margin-bottom: 40px;
+	}
+	#project-container {
+		grid-template-columns: 1fr;
 	}
 	h1 {
 		font-size: 24px;

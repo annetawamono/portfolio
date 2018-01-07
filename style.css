@@ -190,7 +190,10 @@ body, html {
     width: 100%;
     margin-right: 0;
     float: none;
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+
+  #project-container {
+    grid-template-columns: 1fr; } }
 @media only screen and (max-width: 609px) {
   #copyright {
     display: none; }
@@ -211,6 +214,9 @@ body, html {
     margin-right: 0;
     float: none;
     margin-bottom: 40px; }
+
+  #project-container {
+    grid-template-columns: 1fr; }
 
   h1 {
     font-size: 24px; }
