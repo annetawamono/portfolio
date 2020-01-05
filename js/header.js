@@ -20,9 +20,9 @@ function handleMouseMove(event) {
 }
 
 var colors = {
-	red: 0xf25346,
-	blue: 0x0000ff,
-	yellow: 0xffff4c,
+	red: 0x05ffc0,
+	blue: 0xff15aa,
+	yellow: 0x636192,
 	white: 0xffffff
 }
 
