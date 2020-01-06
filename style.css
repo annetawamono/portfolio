@@ -294,5 +294,50 @@ body, html {
     overflow-wrap: break-word;
   }
 }
+a {
+  color: white;
+}
+
+#copyright p, #copyright a {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#about {
+  background-color: #636192;
+}
+#about #text span {
+  color: #636192;
+}
+#about #text .highlight {
+  line-height: 227%;
+}
+#about .content h1 {
+  text-shadow: 6px 6px #05FFC0;
+}
+
+#projects {
+  background-color: #FF53C1;
+}
+#projects .content h1 {
+  text-shadow: 6px 6px #636192;
+}
+
+#contact {
+  background-color: #05FFC0;
+}
+#contact a {
+  color: black;
+}
+#contact .content h1 {
+  text-shadow: 6px 6px #F713A4;
+}
+
+.back a {
+  color: black;
+}
+
+#cv ul > li {
+  border-color: white;
+}
 
 /*# sourceMappingURL=style.css.map */

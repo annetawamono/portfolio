@@ -1,0 +1,59 @@
+$primary-text-color: white;
+$secondary-text-color: black;
+
+$purple: #636192;
+$pink: #F713A4;
+$pink-light: #FF53C1;
+$turquoise: #05FFC0;
+
+a {
+  color: $primary-text-color;
+}
+
+#copyright {
+  p, a {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+#about {
+  background-color: $purple;
+  #text span {
+    color: $purple;
+  }
+  #text .highlight {
+    line-height: 227%;
+  }
+  .content h1 {
+    text-shadow: 6px 6px $turquoise;
+  }
+}
+
+#projects {
+  background-color: $pink-light;
+  .content h1 {
+    text-shadow: 6px 6px $purple;
+  }
+}
+
+#contact {
+  background-color: $turquoise;
+  a {
+    color: $secondary-text-color;
+  }
+  .content h1 {
+    text-shadow: 6px 6px $pink;
+  }
+}
+
+.back {
+  a {
+    color: $secondary-text-color;
+  }
+}
+
+#cv {
+  ul>li {
+    border-color: $primary-text-color;
+  }
+}
