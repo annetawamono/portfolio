@@ -321,6 +321,21 @@ a {
 #projects .content h1 {
   text-shadow: 6px 6px #636192;
 }
+#projects #project-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+#projects .proj-item {
+  border: none;
+}
+#projects .proj-item h2 {
+  color: #FF53C1;
+}
+#projects .proj-item h2 span {
+  background-color: white;
+}
+#projects .proj-item p {
+  color: white;
+}
 
 #contact {
   background-color: #05FFC0;

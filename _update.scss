@@ -34,6 +34,21 @@ a {
   .content h1 {
     text-shadow: 6px 6px $purple;
   }
+  #project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .proj-item {
+      border: none;
+      h2 {
+        color: $pink-light;
+        span {
+          background-color: white;
+        }
+      }
+      p {
+        color: white;
+      }
+  }
 }
 
 #contact {
