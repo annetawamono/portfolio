@@ -77,4 +77,22 @@ $(function() {
   }).mouseleave(function() {
     $(this).removeClass("backHover");
   });
+
+  $("#linkedin").mouseenter(function() {
+    $(this).addClass("backHover");
+  }).mouseleave(function() {
+    $(this).removeClass("backHover");
+  });
+
+  $("#github").mouseenter(function() {
+    $(this).addClass("backHover");
+  }).mouseleave(function() {
+    $(this).removeClass("backHover");
+  });
+
+  $("#codepen").mouseenter(function() {
+    $(this).addClass("backHover");
+  }).mouseleave(function() {
+    $(this).removeClass("backHover");
+  });
 });

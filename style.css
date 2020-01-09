@@ -72,7 +72,7 @@ body, html {
 }
 
 #about {
-  background-color: blue;
+  background-color: #636192;
 }
 
 #text {
@@ -80,7 +80,7 @@ body, html {
 }
 #text span {
   background-color: white;
-  color: blue;
+  color: #636192;
 }
 #text div {
   width: 40%;
@@ -94,7 +94,7 @@ body, html {
 }
 
 #projects {
-  background-color: #f25346;
+  background-color: #F713A4;
 }
 
 #project-container {
@@ -113,7 +113,7 @@ body, html {
 }
 
 #contact {
-  background-color: #ffd454;
+  background-color: #05FFC0;
 }
 
 #links {
@@ -152,7 +152,7 @@ body, html {
   transition: box-shadow 0.2s ease-in;
 }
 #cv ul li:hover {
-  box-shadow: 5px 5px blue;
+  box-shadow: 5px 5px #636192;
 }
 #cv img {
   vertical-align: sub;
@@ -184,15 +184,15 @@ body, html {
 }
 
 .aLinkHover {
-  border-bottom: 4px solid blue;
+  border-bottom: 4px solid #636192;
 }
 
 .pLinkHover {
-  border-bottom: 4px solid #f25346;
+  border-bottom: 4px solid #F713A4;
 }
 
 .cLinkHover {
-  border-bottom: 4px solid #ffd454;
+  border-bottom: 4px solid #05FFC0;
 }
 
 .backHover {
@@ -279,7 +279,7 @@ body, html {
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 40px;
   }
 
   p, ul {
@@ -321,9 +321,6 @@ a {
 #projects .content h1 {
   text-shadow: 6px 6px #636192;
 }
-#projects #project-container {
-  grid-template-columns: repeat(2, 1fr);
-}
 #projects .proj-item {
   border: none;
 }
@@ -335,6 +332,10 @@ a {
 }
 #projects .proj-item p {
   color: white;
+}
+
+#project-container {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 #contact {
@@ -353,6 +354,18 @@ a {
 
 #cv ul > li {
   border-color: white;
+}
+#cv img {
+  width: 16px;
+  position: relative;
+  bottom: 2px;
+  line-height: 2px;
+}
+
+@media only screen and (max-width: 609px) {
+  #project-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
