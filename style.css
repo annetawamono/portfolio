@@ -366,6 +366,14 @@ a {
   #project-container {
     grid-template-columns: 1fr;
   }
+
+  #cv ul a {
+    font-size: 15px;
+  }
+
+  #contact a {
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

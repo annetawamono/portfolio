@@ -35,7 +35,7 @@ function createScene() {
 	console.log(window.innerWidth);
 
 	if(WIDTH < 1200) {
-		$("#world").append("<img id='logo' src='media/images/logo.png' />");
+		$("#world").append("<img id='logo' src='media/images/mobile_header.jpg' />");
 		return;
 	}
 
