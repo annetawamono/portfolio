@@ -362,6 +362,10 @@ a {
   line-height: 2px;
 }
 
+#links ul a {
+  line-height: 50px;
+}
+
 @media only screen and (max-width: 609px) {
   #project-container {
     grid-template-columns: 1fr;
@@ -373,6 +377,72 @@ a {
 
   #contact a {
     font-size: 15px;
+  }
+}
+html, a, a:hover {
+  cursor: none;
+}
+
+#cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #636192;
+  transform: rotateY(0deg) rotate(45deg);
+  border-radius: 0%;
+  border: solid 3px #636192;
+}
+
+.animateIn {
+  -webkit-animation: rotateIn 0.5s ease-out 0s 1;
+  -moz-animation: rotateIn 0.5s ease-out 0s 1;
+  -ms-animation: rotateIn 0.5s ease-out 0s 1;
+  -o-animation: rotateIn 0.5s ease-out 0s 1;
+  animation: rotateIn 0.5s ease-out 0s 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.animateOut {
+  -webkit-animation: rotateOut 0.5s ease-out 0s 1;
+  -moz-animation: rotateOut 0.5s ease-out 0s 1;
+  -ms-animation: rotateOut 0.5s ease-out 0s 1;
+  -o-animation: rotateOut 0.5s ease-out 0s 1;
+  animation: rotateOut 0.5s ease-out 0s 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@keyframes rotateIn {
+  0% {
+    border-radius: 0%;
+    transform: rotateY(0deg) rotate(45deg);
+    background-color: #636192;
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotateY(0deg) rotate(90deg);
+    background-color: rgba(99, 97, 146, 0);
+  }
+}
+@keyframes rotateOut {
+  0% {
+    border-radius: 50%;
+    transform: rotateY(0deg) rotate(90deg);
+    background-color: rgba(225, 0, 0, 0);
+  }
+  100% {
+    border-radius: 0%;
+    transform: rotateY(0deg) rotate(45deg);
+    background-color: #e10000;
   }
 }
 
