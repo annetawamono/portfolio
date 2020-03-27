@@ -22,9 +22,9 @@ html, a, a:hover {
   border: solid 3px $blue;
 }
 
-@mixin rotInMix($color, $color-fill) {
-  0% { border-radius: 0%; transform: rotateY(0deg) rotate(45deg); background-color: $color-fill }
-  100% { border-radius: 50%; transform: rotateY(0deg) rotate(90deg); background-color: $color }
+@mixin rotMix($color, $radStart, $radEnd, $transRotStart, $transRotEnd) {
+  0% { border-radius: $radStart; transform: rotateY(0deg) rotate($transRotStart); background-color: $color }
+  100% { border-radius: $radEnd; transform: rotateY(0deg) rotate($transRotEnd); background-color: $color }
 }
 
 .animateIn {
@@ -58,12 +58,9 @@ html, a, a:hover {
 }
 
 @keyframes rotateIn {
-  @include rotInMix($blueRGB, $blueRGB-fill)
-  // 0% { border-radius: 0%; transform: rotateY(0deg) rotate(45deg); background-color: rgba(225, 0, 0, 1) }
-  // 100% { border-radius: 50%; transform: rotateY(0deg) rotate(90deg); background-color: rgba(225, 0, 0, 0) }
+  @include rotMix($blueRGB, 0%, 50%, 45deg, 90deg)
 }
 
 @keyframes rotateOut {
-  0% { border-radius: 50%; transform: rotateY(0deg) rotate(90deg); background-color: rgba(225, 0, 0, 0); }
-  100% { border-radius: 0%; transform: rotateY(0deg) rotate(45deg); background-color: rgba(225, 0, 0, 1); }
+  @include rotMix($blueRGB, 50%, 0%, 90deg, 45deg)
 }

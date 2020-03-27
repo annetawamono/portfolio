@@ -425,7 +425,7 @@ html, a, a:hover {
   0% {
     border-radius: 0%;
     transform: rotateY(0deg) rotate(45deg);
-    background-color: #636192;
+    background-color: rgba(99, 97, 146, 0);
   }
   100% {
     border-radius: 50%;
@@ -437,12 +437,12 @@ html, a, a:hover {
   0% {
     border-radius: 50%;
     transform: rotateY(0deg) rotate(90deg);
-    background-color: rgba(225, 0, 0, 0);
+    background-color: rgba(99, 97, 146, 0);
   }
   100% {
     border-radius: 0%;
     transform: rotateY(0deg) rotate(45deg);
-    background-color: #e10000;
+    background-color: rgba(99, 97, 146, 0);
   }
 }
 
