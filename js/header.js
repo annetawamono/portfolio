@@ -32,7 +32,7 @@ function createScene() {
 	HEIGHT = window.innerHeight;
 	WIDTH = window.innerWidth;
 
-	console.log(window.innerWidth);
+	//console.log(window.innerWidth);
 
 	if(WIDTH < 1200) {
 		$("#world").append("<img id='logo' src='media/images/mobile_header.jpg' />");

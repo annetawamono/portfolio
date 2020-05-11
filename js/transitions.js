@@ -2,7 +2,6 @@ $(function() {
   // Page Transitions
   var about = false, proj = false, contact = false;
 
-  console.log("hi");
   $("#aLink").click(function() {
     if(about) {
       about = false;
