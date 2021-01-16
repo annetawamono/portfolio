@@ -6,6 +6,8 @@ $pink: #F713A4;
 $pink-light: #FF53C1;
 $turquoise: #05FFC0;
 
+$small-font-size: 18px;
+
 a {
   color: $primary-text-color;
 }
@@ -43,7 +45,13 @@ a {
         }
       }
       p {
-        color: white;
+        color: $primary-text-color;
+        &.stack span {
+          background-color: white;
+          margin-right: 1rem;
+          color: $pink-light;
+          font-size: $small-font-size;
+        }
       }
   }
 }
