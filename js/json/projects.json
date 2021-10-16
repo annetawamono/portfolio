@@ -1,15 +1,68 @@
-{"projects":[
-    {"name": "Megabooks VueJS Solution", "image": "media/images/megabooks.png", "description": "A bookseller marketplace solution , this is a CRUD app I built using Apollo as my server and Vue + Vuetify for my frontend. It was my first practical experience with the whole stack, and I was pleased that the learning curve wasn't terribly steep 😅. I definitely look forward to using this stack for future projects. You can see the project on <b><a href='https://github.com/annetawamono/megabooks-vue-js-solution'>Github</a></b> or view the live project through the link below.", "link": "https://megabooks-vue-js-solution.vercel.app/", "type": "web", "stack": ["NodeJS", "Vue", "Vuetify", "GraphQL", "API"]},
-    {"name": "React Movie Search", "image": "media/images/movie_search.png", "description": "This project is a simple movie search app that I built to get acquianted with React. It's based on a tutorial by James Q Quick and I extended it by including a router between the home and search pages. I also took the opportunity to learn about Jest for testing. The project is bootstrapped with create-react-app and it's packaged with Jest by default. You can see the project on <b><a href='https://github.com/annetawamono/movie-search-app'>Github</a></b> or view the live project through the link below.", "link": "https://annetawamono.github.io/movie-search-app", "type": "web", "stack": ["HTML", "CSS", "Javascript", "React", "API"]},
-    {"name": "Link Up vendor plugin", "image": "media/images/linkup_plugin.jpg", "description": "While studying abroad during a pandemic, I tried to find ways to engage with my future community. I found out about Link Up, a festival organisation for African and Caribbean diaspora. I volunteered online during their festival period and have been continuing my work with them by developing a Wordpress plugin. This plugin gives them a simple way to add information about 3rd party festival vendors and display them in alphabetical order, separated by category.", "link": "https://github.com/annetawamono/linkup-vendor-plugin", "type": "web", "stack": ["HTML", "Javascript", "SCSS", "PHP", "Wordpress"]},
-    {"name": "Neumorphic Calculator", "image": "media/images/neumorphic_calc.jpg", "description": "A javascript scientific calculator. I really wanted to try the whole Neumorphic design trend before it died.", "link": "https://codepen.io/annetawamono/full/NWxJxYM", "type": "web", "stack": ["HTML", "Javascript", "CSS"]},
-    {"name": "Solar Eclipse", "image": "media/images/Solar_Eclipse.jpg", "description": "A school project for creating responsive tables.", "link": "https://annetawamono.github.io/responsive_table/table.html", "type": "web", "stack": ["HTML", "CSS"]},
-    {"name": "The Perfect Sandwich", "image": "media/images/Perfect_sandwhich_thumb.jpg", "description": "Another website that I designed and developed for school. The assignment was affectionately named 'The Perfect Sandwhich' and I went with a classic - the American cheese burger.", "link": "https://annetawamono.github.io/perfectsandwich/", "type": "web", "stack": ["Figma", "HTML", "CSS"]},
-    {"name": "Barbershop", "image": "media/images/Barbershop_thumb.jpg", "description": "A responsive barbershop concept website that I designed for a school project in <b><a href='https://www.figma.com/proto/j6JcTzvUk1NOtnKW49bRNl/RSP-Project-Sandwich?node-id=109%3A2&scaling=min-zoom'>Figma</a></b>. I worked in a group for this project (shoutout to Mihir and Munindra). My group members and I each took a couple of pages to develop and boy did we have a lot of fun trying to figure out the diagonal layout &#128517.", "link": "https://annetawamono.github.io/rsp-group-n-project/index.html", "type": "web", "stack": ["Figma", "HTML", "Javascript", "CSS"]},
-    {"name": "Project Tracker Intro Component", "image": "media/images/desktop-preview.jpg", "description": "I recently discovered <b><a href='https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e' target='_blank'>frontendmentors.io</a></b> and I immediately fell in love with the concept of providing high quality frontend designs for anyone to practise building them. I chose to complete the Project Tracking project as my first challenge (there will definitely be more to come). The project requirements were to build the desktop design and mobile design using any tools I saw fit. I used HTML, Sass and javascript to build my designs and I am pretty happy with the end result. However, I'm always looking for feedback from my peers which is why I like frontendmentors so much, because I can submit my build for review from other developers. I haven't built designs for a tablet view or any landscape orientations, but I will return to this project hopefully in the near future to complete it.", "link": "https://www.frontendmentor.io/solutions/html-sass-and-js-built-with-a-small-keyframe-animation-on-hero-image-9ew-c2YVe", "type": "web", "stack": ["HTML", "Javascript", "SCSS"]},
-    {"name": "Sketch To Animate", "image": "media/images/Portfolio_cover_image.jpg", "description": "I approached Sketch To Animate LLC with a proposal for a website revamp. Starting with building a fresh, new look and offering the e-commerce functionality needed to sell online animation tutorials and tickets to workshops, my aim was to keep design and development at a budget friendly price point. The site was built with Wordpress and Woocommerce. The design was built on top of a starter theme for time efficiency. I chose Figma for designing the UI/UX and then translated into HTML.", "link": "https://sketchtoanimate.com/", "type": "web", "stack": ["Figma", "Wordpress", "Woocommerce"]},
-    {"name": "Myanmar Photo Album", "image": "media/images/myanmar.jpg", "description": "I developed this project to create a family album of a trip to Myanmar in 2017 and to experiment with engaging animations and layouts. The animations were created with anime.js.", "link": "https://annetawamono.github.io/myanmar/", "type": "web", "stack": ["HTML", "Javascript", "SCSS"]},
-    {"name": "Scimatics Homework Tracker", "image": "media/images/scihwwt.png", "description": "During my university studies, I worked for a tutoring company that provided homework assistance for high school students. I saw a need for the company to obtain an efficient way to keep track of the student’s progress and to log their homework, so I designed and developed a web app MVP for them. This was my first attempt at building an MVP for a client and I learnt a lot about using PHP and MySQL for my backend. The app was developed using a LAMP stack and it was deployed and utilised by the company.", "link": "http://scimatics.annetawamono.co.za/", "type": "web", "stack": ["HTML", "Javascript", "CSS", "PHP", "MySQL"]},
-    {"name": "Confidance", "image": "media/images/confidance.jpg", "description": "A Wordpress blog for dancer and writer, NeoTheGift", "link": "http://confi.dance/", "type": "web", "stack": ["Wordpress"]},
-    {"name": "Lost At Sea", "image": "media/images/lostatsea.jpg", "description": "A ThreeJS experiment.", "link": "https://codepen.io/annetawamono/full/OzmBNZ/", "type": "web", "stack": ["HTML", "Javascript", "ThreeJS", "CSS"]}
-]}
+{
+    "projects": [
+        {
+            "name": "Megabooks VueJS Solution",
+            "image": "media/images/megabooks.png",
+            "description": "A bookseller marketplace solution , this is a CRUD app I built using Apollo as my server and Vue + Vuetify for my frontend. It was my first practical experience with the whole stack, and I was pleased that the learning curve wasn't terribly steep 😅. I definitely look forward to using this stack for future projects. You can see the project on <b><a href='https://github.com/annetawamono/megabooks-vue-js-solution'>Github</a></b> or view the live project through the link below.",
+            "link": "https://megabooks-vue-js-solution.vercel.app/",
+            "type": "web",
+            "stack": [
+                "NodeJS",
+                "Vue",
+                "Vuetify",
+                "GraphQL",
+                "API"
+            ]
+        },
+        {
+            "name": "Link Up vendor plugin",
+            "image": "media/images/linkup_plugin.jpg",
+            "description": "While studying abroad during a pandemic, I tried to find ways to engage with my future community. I found out about Link Up, a festival organisation for African and Caribbean diaspora. I volunteered online during their festival period and have been continuing my work with them by developing a Wordpress plugin. This plugin gives them a simple way to add information about 3rd party festival vendors and display them in alphabetical order, separated by category.",
+            "link": "https://github.com/annetawamono/linkup-vendor-plugin",
+            "type": "web",
+            "stack": [
+                "HTML",
+                "Javascript",
+                "SCSS",
+                "PHP",
+                "Wordpress"
+            ]
+        },
+        {
+            "name": "The Perfect Sandwich",
+            "image": "media/images/Perfect_sandwhich_thumb.jpg",
+            "description": "Another website that I designed and developed for school. The assignment was affectionately named 'The Perfect Sandwhich' and I went with a classic - the American cheese burger.",
+            "link": "https://annetawamono.github.io/perfectsandwich/",
+            "type": "web",
+            "stack": [
+                "Figma",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {
+            "name": "Project Tracker Intro Component",
+            "image": "media/images/desktop-preview.jpg",
+            "description": "I recently discovered <b><a href='https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e' target='_blank'>frontendmentors.io</a></b> and I immediately fell in love with the concept of providing high quality frontend designs for anyone to practise building them. I chose to complete the Project Tracking project as my first challenge (there will definitely be more to come). The project requirements were to build the desktop design and mobile design using any tools I saw fit. I used HTML, Sass and javascript to build my designs and I am pretty happy with the end result. However, I'm always looking for feedback from my peers which is why I like frontendmentors so much, because I can submit my build for review from other developers. I haven't built designs for a tablet view or any landscape orientations, but I will return to this project hopefully in the near future to complete it.",
+            "link": "https://www.frontendmentor.io/solutions/html-sass-and-js-built-with-a-small-keyframe-animation-on-hero-image-9ew-c2YVe",
+            "type": "web",
+            "stack": [
+                "HTML",
+                "Javascript",
+                "SCSS"
+            ]
+        },
+        {
+            "name": "Myanmar Photo Album",
+            "image": "media/images/myanmar.jpg",
+            "description": "I developed this project to create a family album of a trip to Myanmar in 2017 and to experiment with engaging animations and layouts. The animations were created with anime.js.",
+            "link": "https://annetawamono.github.io/myanmar/",
+            "type": "web",
+            "stack": [
+                "HTML",
+                "Javascript",
+                "SCSS"
+            ]
+        }
+    ]
+}
