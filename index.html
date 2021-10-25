@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Anneta Wamono</title>
 	<meta charset="utf-8">
@@ -12,21 +13,31 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script> -->
 </head>
+
 <body>
 	<header id="world">
 		<div id="links">
-				<ul>
-						<li><a id="aLink">About Me</a></li>
-						<li><a id="pLink">Projects</a></li>
-						<li><a id="cLink">Contact Me</a></li>
-				</ul>
+			<ul>
+				<li><a id="aLink">About Me</a></li>
+				<li><a id="pLink">Projects</a></li>
+				<li><a id="cLink">Contact Me</a></li>
+			</ul>
 		</div>
 		<div id="copyright">
-			<p>Icons made by <a id="download" href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> and <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> and  <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> and <a href="https://www.flaticon.com/authors/swifticons" title="Swifticons">Swifticons</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+			<p>Icons made by <a id="download" href="https://www.flaticon.com/authors/gregor-cresnar"
+					title="Gregor Cresnar">Gregor Cresnar</a> and <a
+					href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> and <a
+					href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> and <a
+					href="https://www.flaticon.com/authors/swifticons" title="Swifticons">Swifticons</a> and <a
+					href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+					href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+					href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+					target="_blank">CC 3.0 BY</a></p>
 		</div>
 		<div id="cv">
 			<ul>
-				<li><img src="media/images/resume-document.png" /> <a href="media/Anneta_IT_Resume_SA_version.pdf" target="_blank">Download my Resume</a></li>
+				<li><img src="media/images/resume-document.png" /> <a href="media/Anneta_IT_Resume_SA_version.pdf"
+						target="_blank">Download my Resume</a></li>
 			</ul>
 		</div>
 	</header>
@@ -36,7 +47,9 @@
 			<h1>Front-end Developer and Designer</h1>
 			<div id="text">
 				<div class="highlight">
-					<h2>Hi there! My name is <span>Anneta Wamono</span> and I'm a South African web developer and designer based in Cape Town. Passionate about designing, developing and implementing engaging products.</h2>
+					<h2>Hi there! My name is <span>Anneta Wamono</span> and I'm a South African web developer and
+						designer based in Cape Town. Passionate about designing, developing and implementing engaging
+						products.</h2>
 				</div>
 				<div>
 					<h2>What I do</h2>
@@ -50,7 +63,8 @@
 						<li><span>Version Control</span><br />Git, Github</li>
 						<li><span>Project tracking</span><br />Trello</li>
 						<li><span>Game Dev</span><br />Unity, Phaser</li>
-						<li><span>Creative Software</span><br />Adobe Creative Suite (Photoshop / Illustrator / XD / Animate / Premier Pro / After Effects / Audition)</li>
+						<li><span>Creative Software</span><br />Adobe Creative Suite (Photoshop / Illustrator / XD /
+							Animate / Premier Pro / After Effects / Audition)</li>
 					</ul>
 				</div>
 			</div>
@@ -70,16 +84,26 @@
 			<p>Let me help bring your ideas to life :)</p><br>
 			<div id="deets">
 				<ul>
-					<li><img src="media/images/envelope.png"/> <a id="email" href="mailto:annetawamono@yahoo.com.au">annetawamono@yahoo.com.au</a></li>
-					<li><img src="media/images/linkedin.png"/> <a id="linkedin" href="https://www.linkedin.com/in/anneta-wamono-40409471/">linkedin</a></li>
-					<li><img src="media/images/github.png"/> <a id="github" href="https://github.com/annetawamono">Github</a></li>
-					<li><img src="media/images/codepen.png"/> <a id="codepen" href="https://codepen.io/annetawamono/">Codepen</a></li>
+					<li><img src="media/images/envelope.png" /> <a id="email"
+							href="mailto:annetawamono@yahoo.com.au">annetawamono@yahoo.com.au</a></li>
+					<li><img src="media/images/linkedin.png" /> <a id="linkedin"
+							href="https://www.linkedin.com/in/anneta-wamono-40409471/">linkedin</a></li>
+					<li><img src="media/images/github.png" /> <a id="github"
+							href="https://github.com/annetawamono">Github</a></li>
+					<li><img src="media/images/codepen.png" /> <a id="codepen"
+							href="https://codepen.io/annetawamono/">Codepen</a></li>
 				</ul>
 			</div>
 		</div>
 	</section>
 	<script type="text/javascript" src="js/header.js"></script>
 	<script type="text/javascript" src="js/transitions.js"></script>
-	<script type="text/javascript" src="js/projects.js"></script>
+	<script type="module" src="js/projects.js"></script>
+	<!-- <script type="module">
+		import { default as megabooks } from "/js/megabooks.js";
+
+		console.log(megabooks);
+	</script> -->
 </body>
+
 </html>
