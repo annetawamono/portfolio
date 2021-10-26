@@ -111,4 +111,10 @@ $(function () {
   }).mouseleave(function () {
     $(this).removeClass("backHover");
   });
+
+  $(".proj-item").mouseenter(function () {
+    $(this).find("h2").addClass("scale-in");
+  }).mouseleave(function () {
+    $(this).find("h2").removeClass("scale-in");
+  });
 });

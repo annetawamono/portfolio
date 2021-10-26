@@ -1,7 +1,8 @@
 let project = {
     "name": "Myanmar Photo Album",
     "short_name": "Myanmar🛕",
-    "color": "#E5651C",
+    "background_color": "#E5651C",
+    "text_class": "black",
     "image": "media/images/myanmar.jpg",
     "intro": "This project is a photo album I created for a trip I took with my family to Myanmar in 2017. We traveled north, starting from Yangon to Kalaw and Maymyo. I brought a disposable camera with me and took photos of my family and the beautiful scenery. \b The project opens up with a brief introduction and then an interactive map of Myanmar that moves it’s marker to each city upon selection. You’re also able to view the photos I took in each city. I’ve flourished the album with animations driven by jQuery and AnimeJS to enhance the storytelling and appeal.",
     "goals": "When the concept for this project was brewing in my mind, I was very inspired by the beautiful creative websites I saw on Awwwards.com. I wanted to create an experience for the user. This would be my first attempt at combining my love for storytelling with my love for tech. \b I designed the website using photoshop. I wanted the UI to be simple and have a flow to it, so that the user is guided through the website. I knew that I wanted to experiment with text and layout animations, so I used AnimeJS for the text and jQuery for all the other animations since I was more familiar with it.",

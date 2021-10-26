@@ -1,7 +1,8 @@
 let project = {
     "name": "Megabooks",
     "short_name": "Megabooks📚",
-    "color": "#02D13C",
+    "background_color": "#02D13C",
+    "text_class": "black",
     "image": "media/images/megabooks.png",
     "intro": "This project is a bookstore solution for managers to keep track of book purchases. Managers can register a new account, or login with an existing account to get access to the customer dashboard. \b I was the sole developer for the project, and tackled the backend and frontend of the project. It was my first real go at building an application using VueJS and GraphQL. Having come from a LAMP background, I was pleasantly surprised at how quickly I could get around Vue and GraphQL, and how much fun it was to learn.",
     "goals": "This project came to me as a test for a job application I did in early 2021. The project scope was to create a CRUD application with a user authentication system, using GraphQL to make my API requests and VueJS for my frontend. The time budget was 2 weeks. I was free to choose everything else about the project - what data source to resolve my GraphQL endpoints with, how I built my authentication, what frontend design frameworks to use etc.",
