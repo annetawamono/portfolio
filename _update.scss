@@ -48,6 +48,9 @@ a {
 
 #projects {
   background-color: $pink-light;
+  a:not(.back>a):hover {
+    text-decoration: underline;
+  }
     h1 {
       text-shadow: 6px 6px $purple;
     }
@@ -79,16 +82,13 @@ a {
   }
 }
 
-.black {
-  color: #000000;
-}
 
-.white {
-  color: #ffffff;
-}
 
 #project-container {
   grid-template-columns: repeat(2, 1fr);
+  .proj-item:first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 #project-page {
@@ -99,6 +99,10 @@ a {
   h2 {
     border-bottom: 4px solid #ffffff ;
     width: fit-content;
+  }
+
+  a:not(.back>a):hover {
+    text-decoration: underline;
   }
   
   p:not(.stack) {
@@ -126,6 +130,21 @@ a {
       display: flex;
       gap: 2rem;
     }
+  }
+  iframe {
+    width: 100%;
+    max-width: 900px;
+  }
+}
+
+.black {
+  color: #000000;
+}
+
+.white {
+  color: #ffffff;
+  h1 {
+    text-shadow: 6px 6px #000000 !important;
   }
 }
 
