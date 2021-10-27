@@ -1,8 +1,8 @@
-import { default as Megabooks } from "./js/projects/megabooks.js";
-import { default as Myanmar } from "./js/projects/myanmar.js";
-import { default as WhereDidIPutIt } from "./js/projects/where-did-i-put-it.js";
-import { default as LinkUpVendors } from "./js/projects/linkupvendors.js";
-import { default as Hacktoberfest } from "./js/projects/hacktober.js";
+import { default as Megabooks } from "./projects/megabooks.js";
+import { default as Myanmar } from "./projects/myanmar.js";
+import { default as WhereDidIPutIt } from "./projects/where-did-i-put-it.js";
+import { default as LinkUpVendors } from "./projects/linkupvendors.js";
+import { default as Hacktoberfest } from "./projects/hacktober.js";
 
 let projects = [WhereDidIPutIt, Hacktoberfest, LinkUpVendors, Megabooks, Myanmar];
 
