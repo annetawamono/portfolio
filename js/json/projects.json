@@ -1,20 +1,6 @@
 {
     "projects": [
         {
-            "name": "Megabooks VueJS Solution",
-            "image": "media/images/megabooks.png",
-            "description": "A bookseller marketplace solution , this is a CRUD app I built using Apollo as my server and Vue + Vuetify for my frontend. It was my first practical experience with the whole stack, and I was pleased that the learning curve wasn't terribly steep 😅. I definitely look forward to using this stack for future projects. You can see the project on <b><a href='https://github.com/annetawamono/megabooks-vue-js-solution'>Github</a></b> or view the live project through the link below.",
-            "link": "https://megabooks-vue-js-solution.vercel.app/",
-            "type": "web",
-            "stack": [
-                "NodeJS",
-                "Vue",
-                "Vuetify",
-                "GraphQL",
-                "API"
-            ]
-        },
-        {
             "name": "Link Up vendor plugin",
             "image": "media/images/linkup_plugin.jpg",
             "description": "While studying abroad during a pandemic, I tried to find ways to engage with my future community. I found out about Link Up, a festival organisation for African and Caribbean diaspora. I volunteered online during their festival period and have been continuing my work with them by developing a Wordpress plugin. This plugin gives them a simple way to add information about 3rd party festival vendors and display them in alphabetical order, separated by category.",
@@ -45,18 +31,6 @@
             "image": "media/images/desktop-preview.jpg",
             "description": "I recently discovered <b><a href='https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e' target='_blank'>frontendmentors.io</a></b> and I immediately fell in love with the concept of providing high quality frontend designs for anyone to practise building them. I chose to complete the Project Tracking project as my first challenge (there will definitely be more to come). The project requirements were to build the desktop design and mobile design using any tools I saw fit. I used HTML, Sass and javascript to build my designs and I am pretty happy with the end result. However, I'm always looking for feedback from my peers which is why I like frontendmentors so much, because I can submit my build for review from other developers. I haven't built designs for a tablet view or any landscape orientations, but I will return to this project hopefully in the near future to complete it.",
             "link": "https://www.frontendmentor.io/solutions/html-sass-and-js-built-with-a-small-keyframe-animation-on-hero-image-9ew-c2YVe",
-            "type": "web",
-            "stack": [
-                "HTML",
-                "Javascript",
-                "SCSS"
-            ]
-        },
-        {
-            "name": "Myanmar Photo Album",
-            "image": "media/images/myanmar.jpg",
-            "description": "I developed this project to create a family album of a trip to Myanmar in 2017 and to experiment with engaging animations and layouts. The animations were created with anime.js.",
-            "link": "https://annetawamono.github.io/myanmar/",
             "type": "web",
             "stack": [
                 "HTML",

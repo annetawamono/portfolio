@@ -1,97 +1,118 @@
-$(function() {
+$(function () {
   // Page Transitions
-  var about = false, proj = false, contact = false;
+  var about = false, proj = false, contact = false, projpage = false;
 
-  $("#aLink").click(function() {
-    if(about) {
+  $(".proj-item").click(function () {
+    if (projpage) {
+      projpage = false;
+      $("#project-page").animate({ height: "hide" }, 500);
+    } else {
+      projpage = true;
+      $("#project-page").animate({ height: "show" }, 500);
+    }
+  });
+
+  $("#aLink").click(function () {
+    if (about) {
       about = false;
-      $("#about").animate({height: "hide"}, 500);
+      $("#about").animate({ height: "hide" }, 500);
     } else {
       about = true;
-      $("#about").animate({height: "show"}, 500);
+      $("#about").animate({ height: "show" }, 500);
     }
   });
 
-  $("#pLink").click(function() {
-    if(proj) {
+  $("#pLink").click(function () {
+    if (proj) {
       proj = false;
-      $("#projects").animate({height: "hide"}, 500);
+      $("#projects").animate({ height: "hide" }, 500);
     } else {
       proj = true;
-      $("#projects").animate({height: "show"}, 500);
+      $("#projects").animate({ height: "show" }, 500);
     }
   });
 
-  $("#cLink").click(function() {
-    if(contact) {
+  $("#cLink").click(function () {
+    if (contact) {
       contact = false;
-      $("#contact").animate({height: "hide"}, 500);
+      $("#contact").animate({ height: "hide" }, 500);
     } else {
       contact = true;
-      $("#contact").animate({height: "show"}, 500);
+      $("#contact").animate({ height: "show" }, 500);
     }
   });
 
-  $(".back").click(function() {
-    if(about) {
+  $(".back").click(function () {
+    if (about) {
       $("#aLink").trigger("click");
     }
-    if(proj) {
-      $("#pLink").trigger("click");
+    if (projpage) {
+      projpage = false;
+      $("#project-page").animate({ height: "hide" }, 500);
     }
-    if(contact) {
+    if (contact) {
       $("#cLink").trigger("click");
     }
   });
 
+  $("#projects .back").click(function () {
+    if (proj) {
+      $("#pLink").trigger("click");
+    }
+  });
+
   // Hover links
-  $("#aLink").mouseenter(function() {
+  $("#aLink").mouseenter(function () {
     $(this).addClass("aLinkHover");
-  }).mouseleave(function() {
+  }).mouseleave(function () {
     $(this).removeClass("aLinkHover");
   });
 
-  $("#pLink").mouseenter(function() {
+  $("#pLink").mouseenter(function () {
     $(this).addClass("pLinkHover");
-  }).mouseleave(function() {
+  }).mouseleave(function () {
     $(this).removeClass("pLinkHover");
   });
 
-  $("#cLink").mouseenter(function() {
+  $("#cLink").mouseenter(function () {
     $(this).addClass("cLinkHover");
-  }).mouseleave(function() {
+  }).mouseleave(function () {
     $(this).removeClass("cLinkHover");
   });
 
-  $(".back").mouseenter(function() {
+  $(".back").mouseenter(function () {
     $(this).addClass("backHover");
-    $(".content>h1").addClass("topHover");
-  }).mouseleave(function() {
-    $(this).removeClass("backHover");
-    $(".content>h1").removeClass("topHover");
-  });
-
-  $("#email").mouseenter(function() {
-    $(this).addClass("backHover");
-  }).mouseleave(function() {
+  }).mouseleave(function () {
     $(this).removeClass("backHover");
   });
 
-  $("#linkedin").mouseenter(function() {
+  $("#email").mouseenter(function () {
     $(this).addClass("backHover");
-  }).mouseleave(function() {
+  }).mouseleave(function () {
     $(this).removeClass("backHover");
   });
 
-  $("#github").mouseenter(function() {
+  $("#linkedin").mouseenter(function () {
     $(this).addClass("backHover");
-  }).mouseleave(function() {
+  }).mouseleave(function () {
     $(this).removeClass("backHover");
   });
 
-  $("#codepen").mouseenter(function() {
+  $("#github").mouseenter(function () {
     $(this).addClass("backHover");
-  }).mouseleave(function() {
+  }).mouseleave(function () {
     $(this).removeClass("backHover");
+  });
+
+  $("#codepen").mouseenter(function () {
+    $(this).addClass("backHover");
+  }).mouseleave(function () {
+    $(this).removeClass("backHover");
+  });
+
+  $(".proj-item").mouseenter(function () {
+    $(this).find("h2").addClass("scale-in");
+  }).mouseleave(function () {
+    $(this).find("h2").removeClass("scale-in");
   });
 });
