@@ -29,6 +29,10 @@ for (let i in projects) {
 // TODO: make function that builds project page
 function renderProjectPage(project) {
   console.log("rendering");
+  let $projectPage = $("#project-page");
+  $projectPage.css("background-color", project.background_color);
+  $projectPage.addClass(project.text_class);
+
   let $page = $("#page-container");
   $page.empty();
   let $hero = $("<img class='hero_img' src='" + project.hero_image + "'>");
@@ -43,18 +47,18 @@ function renderProjectPage(project) {
 
   let $intro = $("<p>" + project.intro + "</p>");
 
-  let $links = $("<a href='" + project.github + "'>Github &#129133;</a> <a href='" + project.link + "'>View live &#129133;</a>");
+  let $links = $("<div class='links'><a target='_blank' href='" + project.github + "'>Github &#129133;</a> <a target='_blank' href='" + project.link + "'>View live &#129133;</a></div>");
 
   let $goals = $("<h2>Purpose and goals</h2><p>" + project.goals + "</p>");
 
-  let $spotlight = $("<h2>Purpose and goals</h2><p>" + project.spotlight + "</p>");
+  let $spotlight = $("<h2>Spotlight</h2><p>" + project.spotlight + "</p>");
 
-  let $proud = $("<h2>Some other features I'm proud of</h2>");
+  let $proud = $("<h3>Some other features I'm proud of</h3>");
   let $proud_list = $("<ul></ul>");
   for (let k in project.proud) {
     $proud_list.append("<li>" + project.proud[k] + "</li>");
   }
-  $proud.append($proud_list);
+  // $proud.append($proud_list);
 
   let $lessons = $("<h2>Lessons learned</h2><p>" + project.learned + "</p>");
 
@@ -66,5 +70,6 @@ function renderProjectPage(project) {
   $page.append($goals);
   $page.append($spotlight);
   $page.append($proud);
+  $page.append($proud_list);
   $page.append($lessons);
 }

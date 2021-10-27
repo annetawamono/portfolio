@@ -219,13 +219,18 @@ body, html {
     font-size: 40px; }
 
   p, ul {
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: 1.5; }
 
   h2 {
     font-size: 18px; }
 
   li {
     overflow-wrap: break-word; } }
+h3 {
+  box-sizing: border-box;
+  height: 2rem; }
+
 a {
   color: white; }
 
@@ -234,6 +239,8 @@ a {
   margin: 100px auto 0;
   padding-left: 16px;
   padding-right: 16px; }
+  .content h3 {
+    width: fit-content; }
 
 #copyright p, #copyright a {
   color: rgba(255, 255, 255, 0.4); }
@@ -276,11 +283,36 @@ a {
 .black {
   color: #000000; }
 
+.white {
+  color: #ffffff; }
+
 #project-container {
   grid-template-columns: repeat(2, 1fr); }
 
 #project-page {
   background-color: #636192; }
+  #project-page h1 {
+    text-shadow: 6px 6px #ffffff; }
+  #project-page h2 {
+    border-bottom: 4px solid #ffffff;
+    width: fit-content; }
+  #project-page p:not(.stack) {
+    text-align: justify; }
+  #project-page p.stack span {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 2.5; }
+  #project-page p:not(:first-of-type), #project-page ul {
+    margin-bottom: 3rem; }
+  #project-page .hero_img {
+    width: 100%;
+    border-radius: 20px; }
+  #project-page div.links {
+    display: flex;
+    gap: 2rem; }
 
 #contact {
   background-color: #05FFC0; }

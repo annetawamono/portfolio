@@ -8,6 +8,11 @@ $turquoise: #05FFC0;
 
 $small-font-size: 18px;
 
+h3 {
+  box-sizing: border-box;
+  height: 2rem;
+}
+
 a {
   color: $primary-text-color;
 }
@@ -17,6 +22,9 @@ a {
   margin: 100px auto 0;
   padding-left: 16px;
   padding-right: 16px;
+  h3 {
+    width: fit-content;
+  }
 }
 
 #copyright {
@@ -63,11 +71,9 @@ a {
           background-color: rgba(255,255,255,0.2);
           padding: 5px 25px;
           border-radius: 25px;
-          // color: $pink-light;
           font-size: $small-font-size;
           text-align: center;
           line-height: 2.5;
-          // line-height: 1.8;
         }
       }
   }
@@ -77,12 +83,50 @@ a {
   color: #000000;
 }
 
+.white {
+  color: #ffffff;
+}
+
 #project-container {
   grid-template-columns: repeat(2, 1fr);
 }
 
 #project-page {
   background-color: #636192;
+  h1 {
+    text-shadow: 6px 6px #ffffff;
+  }
+  h2 {
+    border-bottom: 4px solid #ffffff ;
+    width: fit-content;
+  }
+  
+  p:not(.stack) {
+    text-align: justify;
+  }
+  p {
+    &.stack span {
+      background-color: rgba(255,255,255,0.2);
+      padding: 5px 25px;
+      border-radius: 25px;
+      font-size: $small-font-size;
+      text-align: center;
+      line-height: 2.5;
+    }
+  }
+  p:not(:first-of-type), ul {
+    margin-bottom: 3rem;
+  }
+  .hero_img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  div {
+    &.links {
+      display: flex;
+      gap: 2rem;
+    }
+  }
 }
 
 #contact {

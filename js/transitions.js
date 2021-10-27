@@ -82,10 +82,8 @@ $(function () {
 
   $(".back").mouseenter(function () {
     $(this).addClass("backHover");
-    $(".content>h1").addClass("topHover");
   }).mouseleave(function () {
     $(this).removeClass("backHover");
-    $(".content>h1").removeClass("topHover");
   });
 
   $("#email").mouseenter(function () {
