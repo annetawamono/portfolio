@@ -1,0 +1,13 @@
+#copyright {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 35px 35px 0 35px;
+	p {
+        // TODO: Get rid of important
+		font-size: 12px !important;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}

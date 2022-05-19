@@ -1,0 +1,13 @@
+@use '../tokens' as *;
+@use '../utilities';
+
+#projects {
+	background-color: $color-brand-light-1;
+	@extend .transitions;
+    #project-container {
+        // max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+}

@@ -1,0 +1,20 @@
+@use '../tokens' as *;
+@use '../utilities';
+
+#contact {
+	background-color: $color-brand-light-3;
+	@extend .transitions;
+    #deets {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+        img {
+            vertical-align: middle;
+        }
+    }
+}

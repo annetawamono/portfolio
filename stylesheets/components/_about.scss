@@ -1,0 +1,24 @@
+@use '../tokens' as *;
+@use '../utilities';
+
+#about {
+	background-color: $color-brand-dark;
+	@extend .transitions;
+    #text {
+        color: $primary-text-color;
+        span {
+            background-color: white;
+            color: $color-brand-dark;
+        }
+        div {
+            width: 40%;
+            margin-right: 10%;
+            float: left;
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}

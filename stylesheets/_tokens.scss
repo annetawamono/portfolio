@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:900,');
+
+$color-purple: hsl(244, 19%, 14%);
+$color-purple-light: hsl(242, 20%, 48%);
+$color-pink: hsl(322, 93%, 52%);
+$color-pink-light: hsl(322, 100%, 66%);
+$color-turquoise: hsl(165, 100%, 51%);
+$color-black: black;
+$color-white: white;
+
+$small-font-size: 18px;
+
+$font-roboto: 'Roboto Mono', monospace;
+$font-rubik: 'Rubik', sans-serif;
+
+$container-width: 1200px;
+
+$rsp-break-lg: (max-width: 991px);
+$rsp-break-md: (max-width: 767px);
+$rsp-break-sm: (max-width: 609px);
+
+// Contextual tokens
+$primary-text-color: $color-white;
+$secondary-text-color: $color-black;
+
+$color-background: $color-purple;
+$color-brand-dark: $color-purple-light;
+$color-brand-light-1: $color-pink;
+$color-brand-light-2: $color-pink-light;
+$color-brand-light-3: $color-turquoise;
+
+$font-default-1: $font-rubik;
+$font-default-2: $font-roboto;

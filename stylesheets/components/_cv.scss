@@ -1,0 +1,29 @@
+@use '../tokens' as *;
+
+#cv {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 35px;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		a {
+			font-size: 18px;
+		}
+		li {
+			border: 2px solid black;
+			// border-radius: 10px;
+			padding: 7px 7px 10px 7px;
+			-webkit-transition: box-shadow 0.2s; /* Safari */
+    	transition: box-shadow 0.2s ease-in;
+		}
+		li:hover {
+			box-shadow: 5px 5px $color-brand-dark;
+		}
+	}
+	img {
+		vertical-align: sub;
+	}
+}
