@@ -80,7 +80,7 @@ function renderProjectPage(project) {
 
   let $video;
   if (project.video) {
-    $video = $('<iframe width="900" height="506" src="https://www.youtube.com/embed/' + project.video + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    $video = $('<iframe data-youtube width="900" height="506" src="https://www.youtube.com/embed/' + project.video + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
     $page.append($video);
   }
 
