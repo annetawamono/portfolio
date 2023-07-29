@@ -152,6 +152,9 @@ a {
   background-color: $turquoise;
   a {
     color: $secondary-text-color;
+    &:hover {
+      border-bottom: 4px solid white;
+    }
   }
   .content h1 {
     text-shadow: 6px 6px $pink;
@@ -161,6 +164,9 @@ a {
 .back {
   a {
     color: $secondary-text-color;
+    &:hover {
+      border-bottom: 4px solid white;
+    }
   }
 }
 

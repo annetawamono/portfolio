@@ -1,6 +1,9 @@
 $(function () {
   // Page Transitions
-  var about = false, proj = false, contact = false, projpage = false;
+  var about = false,
+    proj = false,
+    contact = false,
+    projpage = false;
 
   $(".proj-item").click(function () {
     if (projpage) {
@@ -62,57 +65,35 @@ $(function () {
   });
 
   // Hover links
-  $("#aLink").mouseenter(function () {
-    $(this).addClass("aLinkHover");
-  }).mouseleave(function () {
-    $(this).removeClass("aLinkHover");
-  });
+  $("#aLink")
+    .mouseenter(function () {
+      $(this).addClass("aLinkHover");
+    })
+    .mouseleave(function () {
+      $(this).removeClass("aLinkHover");
+    });
 
-  $("#pLink").mouseenter(function () {
-    $(this).addClass("pLinkHover");
-  }).mouseleave(function () {
-    $(this).removeClass("pLinkHover");
-  });
+  $("#pLink")
+    .mouseenter(function () {
+      $(this).addClass("pLinkHover");
+    })
+    .mouseleave(function () {
+      $(this).removeClass("pLinkHover");
+    });
 
-  $("#cLink").mouseenter(function () {
-    $(this).addClass("cLinkHover");
-  }).mouseleave(function () {
-    $(this).removeClass("cLinkHover");
-  });
+  $("#cLink")
+    .mouseenter(function () {
+      $(this).addClass("cLinkHover");
+    })
+    .mouseleave(function () {
+      $(this).removeClass("cLinkHover");
+    });
 
-  $(".back").mouseenter(function () {
-    $(this).addClass("backHover");
-  }).mouseleave(function () {
-    $(this).removeClass("backHover");
-  });
-
-  $("#email").mouseenter(function () {
-    $(this).addClass("backHover");
-  }).mouseleave(function () {
-    $(this).removeClass("backHover");
-  });
-
-  $("#linkedin").mouseenter(function () {
-    $(this).addClass("backHover");
-  }).mouseleave(function () {
-    $(this).removeClass("backHover");
-  });
-
-  $("#github").mouseenter(function () {
-    $(this).addClass("backHover");
-  }).mouseleave(function () {
-    $(this).removeClass("backHover");
-  });
-
-  $("#codepen").mouseenter(function () {
-    $(this).addClass("backHover");
-  }).mouseleave(function () {
-    $(this).removeClass("backHover");
-  });
-
-  $(".proj-item").mouseenter(function () {
-    $(this).find("h2").addClass("scale-in");
-  }).mouseleave(function () {
-    $(this).find("h2").removeClass("scale-in");
-  });
+  $(".proj-item")
+    .mouseenter(function () {
+      $(this).find("h2").addClass("scale-in");
+    })
+    .mouseleave(function () {
+      $(this).find("h2").removeClass("scale-in");
+    });
 });
