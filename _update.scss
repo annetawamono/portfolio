@@ -101,6 +101,10 @@ a {
     width: fit-content;
   }
 
+  &.white .content h3.back a {
+    color: #fff;
+  }
+
   a:not(.back>a):hover {
     text-decoration: underline;
   }
